@@ -2,7 +2,7 @@
  Disconnect-wsession: forefully logoff a user's session using the qwinsta.exe / rwinsta.exe commands
  Purpose: prevent automatic account lockout
  Defaults to logging off the current user's session on the remote computer.
- 
+  Quinten Steenhuis, 9/20/2016
  #>
 function disconnect-wsession ($computer, $username) {
 	$username = if ($username) {$username} else {$env:username}
